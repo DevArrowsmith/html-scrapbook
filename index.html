@@ -251,5 +251,56 @@
 
 <hr>
 
+<h2>Form</h2>
+<p><i>(NB: My notes on this probably aren't as good as <a href="https://developer.mozilla.org/en-US/docs/Learn/Forms/Your_first_form">this resource</a>.)</i></p>
+<p>Produces a form for submission of data.</p>
+
+<p>A range of elements are used.</p>
+<ul>
+    <li><code>&lt;form&gt;</code> is a top-level element used to define the elements within the form. Also used to define the <code>action</code> that will occur when the form data is submitted (see <code>submit</code> below).</li>
+    <li>Most data input sections consists of a <code>&lt;label&gt;</code> element and a <code>&lt;input&gt;</code> element.</li>
+    <ul>
+        <li><code>&lt;label&gt;</code> states what this input section is for. It should include a <code>for</code> attribute that matches the <code>id</code> attribute of its associated <code>&lt;input&gt;</code> element.</li>
+        <li><code>&lt;input&gt;</code> is a field for inputting the data. It should include a <code>type</code> attribute which specifies the kind of input (eg. text, a number, radio buttons), an <code>id</code> attribute that matches the <code>for</code> attribute of the associated <code>&lt;label&gt;</code> element, and a <code>name</code> attribute that provides an accessible name for screen readers.</li>
+    </ul>
+    <li><code>&lt;textarea&gt;</code> is another input field used for large text such as reviews and communications.</li>
+    <li>A <code>&lt;button&gt;</code> with its <code>type</code> attribute set to <code>"submit</code> concludes the form. Clicking opn this will initiate the <code>action</code> specified in the <code>&lt;form&gt;</code> element, which will usually be processing and communication of the form data. Its <code>value</code> sttribute specifies the text shown in the button.</li>
+    <li>Alternativelt an <code>&lt;input&gt;</code> element with its <code>type</code> attribute set to <code>"submit</code> can be used in the same way as the <code>&lt;button&gt;</code> element.</li>
+</ul>
+
+<p>The default formatting of forms is often non-ideal. They have lots of quirks. These can be circumvented with CSS.</p>
+
+&lt;form id="contact-form"&gt;<br><br>
+    &lt;label for="name"&gt;Name&lt;&sol;label&gt;<br>
+    &lt;input type="text" name="first-name" id="first-name"&gt;<br><br>
+
+    &lt;label for="email"&gt;Email&lt;&sol;label&gt;<br>
+    &lt;input type="text" name="email" id="email"&gt;<br><br>
+
+    &lt;label for="message"&gt;Message&lt;&sol;label&gt;<br>
+    &lt;textarea name="message" id="message"&gt;&lt;&sol;textarea&gt;<br><br>
+
+    &lt;input type="submit" value="Send" id="contact-form-submit"&gt;<br>
+&lt;&sol;form&gt;
+
+    <p>⬇️</p>
+
+    <form id="contact-form">
+        <label for="name">Name</label>
+        <input type="text" name="first-name" id="first-name"><br>
+
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email"><br>
+
+        <label for="message">Message</label>
+        <textarea name="message" id="message"></textarea><br>
+
+        <input type="submit" value="Send" id="contact-form-submit">
+    </form>
+
+<hr>
+
+
+
 </body>
 </html>

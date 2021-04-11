@@ -264,7 +264,7 @@
         <li><code>&lt;input&gt;</code> is a field for inputting the data. It should include a <code>type</code> attribute which specifies the kind of input (eg. text, a number, radio buttons), an <code>id</code> attribute that matches the <code>for</code> attribute of the associated <code>&lt;label&gt;</code> element, and a <code>name</code> attribute that provides an accessible name for screen readers.</li>
     </ul>
     <li><code>&lt;textarea&gt;</code> is another input field used for large text such as reviews and communications.</li>
-    <li>A <code>&lt;button&gt;</code> with its <code>type</code> attribute set to <code>"submit</code> concludes the form. Clicking opn this will initiate the <code>action</code> specified in the <code>&lt;form&gt;</code> element, which will usually be processing and communication of the form data. Its <code>value</code> sttribute specifies the text shown in the button.</li>
+    <li>A <code>&lt;button&gt;</code> with its <code>type</code> attribute set to <code>submit</code> concludes the form. Clicking opn this will initiate the <code>action</code> specified in the <code>&lt;form&gt;</code> element, which will usually be processing and communication of the form data. Its <code>value</code> attribute specifies the text shown in the button.</li>
     <li>Alternativelt an <code>&lt;input&gt;</code> element with its <code>type</code> attribute set to <code>"submit</code> can be used in the same way as the <code>&lt;button&gt;</code> element.</li>
 </ul>
 
@@ -300,7 +300,31 @@
 
 <hr>
 
+<h2>Button</h2>
+<p>Produces a clickable button.</p>
+<p>Can be used to submit forms and for other functionality.</p>
+<p>There are various ways to use a button. A common one is to use its <code>onclick</code> attribute to specify a process to invoke when the button is clicked, such as a JavaScript function.</p>
 
+<p>&lt;button onclick="alertFunction()"&gt;Click me!&lt;&sol;button&gt;<br/>
+    <br/>
+&lt;script&gt;<br/>
+    function myFunction() {<br/>
+        alert("You clicked me! Nice work! 👍");<br/>
+    }<br/>
+    &lt;&sol;script&gt;
+</p>
+
+<p>⬇️</p>
+
+<script>
+    function alertFunction() {
+        alert("You clicked me! Nice work! 👍");
+    }
+</script>
+
+<button onClick="alertFunction();">Click me!</button>
+
+<hr>
 
 </body>
 </html>
